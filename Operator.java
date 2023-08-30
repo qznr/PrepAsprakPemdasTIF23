@@ -17,5 +17,36 @@ public class Operator {
         System.out.println(203%5);
         System.out.println(204%5);
         System.out.println(205%5);
+
+        angka++;
+        System.out.println(angka);
+        angka--;
+        System.out.println(angka);
+
+        angka = angka + 1;
+        System.out.println(angka);
+        angka = angka - 1;
+        System.out.println(angka);
+
+        angka += 1;
+        System.out.println(angka);
+        angka -= 1;
+
+        //Post increment
+        System.out.println("\nPost Increment");
+        System.out.println(angka++);
+        System.out.println(angka);
+        System.out.println(angka--);
+        System.out.println(angka);
+        //Pre Increment
+        System.out.println("Pre Increment");
+        System.out.println(++angka);
+        System.out.println(--angka);
+
+        //char juga bisa increment maupun decrement
+        char huruf = 'a';
+        System.out.println(++huruf);
+        System.out.println(++huruf);
+        System.out.println(--huruf);
     }
 }
