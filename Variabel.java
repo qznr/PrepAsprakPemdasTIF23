@@ -17,16 +17,37 @@ public class Variabel {
 
         // Tipe data Primitif ada dua, yaitu tipe data integral dan tipe data floating point.
 
-        /* 
-         * Tipe data integral yaitu byte, short, int, dan long.
-         * Tipe data integral menyimpan bilangan bulat positif maupun negatif tanpa pecahan maupun angka desimal.
-         */
 
+        //Tipe data textual primitif
+        //Char berada diantara single quote ('')
         char hurufKecilA = 'a';
         char hurufBesarB = 'B';
         char simbolAsterisk = '*';
         char singleQuote = '\''; // Backslash digunakan sebagai character escape (untuk menyampaikan makna yang berbeda pada sebuah karakter)
         char doubleQuote = '\"';
+
+        //String adalah tipe data reference, tapi saya masukkan saja sekalian.
+        String pesan = "Hello world"; //String berada diantara double quote ("")
+        System.out.println(pesan);
+
+
+        /* Tipe data Boolean adalah tipe data yang menyimpan dua nilai (bersifat binary), yaitu true or false. 
+         * Tipe data logika
+         */
+
+        boolean isBenar = true;
+        boolean isSalah = false;
+        boolean isBiggerThanNinety = 100 > 90;
+        System.out.println(isBenar);
+        System.out.println(isSalah);
+        System.out.println(isBiggerThanNinety);
+        System.out.println(100>90);
+        System.out.println(90>100);
+
+        /* 
+         * Tipe data integral yaitu byte, short, int, dan long.
+         * Tipe data integral menyimpan bilangan bulat positif maupun negatif tanpa pecahan maupun angka desimal.
+         */
 
         System.out.println(hurufKecilA);
         System.out.println(hurufBesarB);
@@ -34,6 +55,8 @@ public class Variabel {
         System.out.println(singleQuote);
         System.out.println(doubleQuote);
         System.out.println();
+
+
 
         byte angkaByte = 64;
         byte minimumByteValue = Byte.MIN_VALUE;
@@ -79,19 +102,6 @@ public class Variabel {
         System.out.println("Minimum Value Double : " + minimumDoubleValue);
         System.out.println("Maximum Double : " + maximumDoubleValue);
         System.out.println();
-
-        /* Tipe data Boolean adalah tipe data yang menyimpan dua nilai (bersifat binary), yaitu true or false. 
-         * 
-         */
-
-        boolean isBenar = true;
-        boolean isSalah = false;
-        boolean isBiggerThanNinety = 100 > 90;
-        System.out.println(isBenar);
-        System.out.println(isSalah);
-        System.out.println(isBiggerThanNinety);
-        System.out.println(100>90);
-        System.out.println(90>100);
 
         //Casting
         //Konversi tipe data ke tipe data lain.
