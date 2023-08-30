@@ -132,5 +132,6 @@ public class InputOutput {
         System.out.printf("Usia\t: %-20d\n", usia);
         System.out.printf("IPK\t: %-20.2f\n", ipk);
 
+        in.close();
     }
 }
