@@ -1,16 +1,23 @@
+package Course;
 import java.util.Scanner;  //Untuk menggunakan Scanner harus mengimport library terlebih dahulu
 
 public class InputOutput {
     
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+    public static void main(String[] args) { //Main method, method yg akan dijalankan
 
-        byte angkaByte = in.nextByte();
-        short angkaShort = in.nextShort();
-        int angkaInt = in.nextInt();
-        long angkaLong = in.nextLong();
-        float angkaFloat = in.nextFloat();
-        double angkaDouble = in.nextDouble(); in.nextLine();//Jangan lupa untuk menambagkan nextLine() setelah next() jika ada input lagi.
+        Scanner in = new Scanner(System.in); //Pembuatan object scanner.
+        //TipeData namaVariable = new TipeDatanya(argumennya);
+        //Scanner sc = new Scanner(System.in);
+
+        byte angkaByte = in.nextByte(); //in.nextByte();
+        short angkaShort = in.nextShort(); //in.nextShort();
+        int angkaInt = in.nextInt(); //in.nextInt();
+        long angkaLong = in.nextLong(); //in.nextLong();
+        float angkaFloat = in.nextFloat(); //in.nextFloat();
+        
+        double angkaDouble = in.nextDouble(); //in.nextDouble();
+        
+        in.nextLine();//Jangan lupa untuk menambahkan nextLine() setelah next() jika ada input lagi.
         //next() apapun itu kecuali nextLine() misal nextInt(), nextFloat(), nextDouble(), maupun next() saja.
         //Hal ini dikarenakan sifat next() yang hanya mengambil karakter yang diperlukan (dimaksud) saja.
         //Contoh next() yang hanya mengambil sebelum spasi atau sebelum baris baru.
@@ -29,12 +36,19 @@ public class InputOutput {
         //Namun, ketika kita ada input baru misalnya angka 700, di buffer akan menjadi
         //\n700
         //700 akan terlewati karena nextInt() mengambil karakter line separator tadi, bukannya angka 700.
+
         String kalimat = in.nextLine(); // Input sampai baris baru (new line)
+        //in.nextLine();
+        //Teknik Informatika
         String kata = in.next(); //Input sampai spasi
         in.nextLine(); //Jangan lupa untuk menambagkan nextLine() setelah next() jika ada input lagi.
 
         //Tidak ada nextChar(), gunakan next() namun ditambah dengan method charAt(index) untuk mengambil karakter dari kata tersebut.
         char huruf = in.next().charAt(0); in.nextLine(); //Jangan lupa nextLine() setelah next() apapun itu.
+        //Teknik Informatika
+        //Teknik
+        //T
+        //012345
 
         System.out.println("==================================");
         System.out.println(angkaByte);
@@ -50,7 +64,7 @@ public class InputOutput {
 
         //Output
         //Ada tiga method untuk output di java, yaitu:
-        //System.out.println(); mencetak apa adanya.
+        //System.out.print(); mencetak apa adanya.
         //System.out.println(); mencetak lalu diakhiri dengan baris baru.
         //System.out.printf(format, arguments); mencetak dengan formatting.
         

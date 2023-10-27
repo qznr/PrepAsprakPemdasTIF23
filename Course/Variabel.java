@@ -1,3 +1,4 @@
+package Course;
 public class Variabel {
     public static void main(String[] args) {
 
