@@ -77,14 +77,14 @@ public class CaesarCipher {
 
         for (int i = 0; i < text.length(); i++) {
             char c = text.charAt(i);
+            char base = Character.isUpperCase(c) ? 'A' : 'a';
+
+            if (ignoreCase) {
+                base = 'a';  // Force all letters to lowercase if ignoreCase is true
+            }
+
             if (Character.isLetter(c)) {
-                char base = Character.isUpperCase(c) ? 'A' : 'a';
-
-                if (ignoreCase) {
-                    base = 'A';  // If ignoreCase is true, convert all letters to uppercase
-                }
-
-                int originalAlphabetIndex = c - base;
+                int originalAlphabetIndex = Character.toLowerCase(c) - base;
                 int newAlphabetIndex = (originalAlphabetIndex + shift) % alphabetSize;
 
                 if (newAlphabetIndex < 0) {
@@ -94,20 +94,21 @@ public class CaesarCipher {
                 char encodedChar = (char) (base + newAlphabetIndex);
 
                 if (!maintainCase && Character.isLowerCase(c)) {
-                    encodedChar = Character.toLowerCase(encodedChar);  // Convert back to lowercase if needed
+                    encodedChar = Character.toLowerCase(encodedChar);
                 }
+
                 encodedText += encodedChar;
             } else {
                 if (includeNonAlphabet) {
-                    // Include non-alphabet characters by shifting them
                     int shiftAmount = shift % 26;
                     char shiftedChar = (char) (c + shiftAmount);
                     encodedText += shiftedChar;
                 } else {
-                    encodedText += c;  // Include non-alphabet characters without modification
+                    encodedText += c;
                 }
             }
         }
+
         return encodedText;
     }
 
