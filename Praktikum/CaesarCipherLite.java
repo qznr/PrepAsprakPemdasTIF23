@@ -33,9 +33,9 @@ public class CaesarCipherLite {
                 case 4:
                     // Get the input text from the user
                     in.nextLine();  // Consume the previous newline character
-                    System.out.print("Enter the text to encode: ");
+                    System.out.print("Masukkan text untuk diencode: ");
                     String inputText = in.nextLine();
-                    System.out.print("Enter the shift (integer): ");
+                    System.out.print("Jumlah geser (integer): ");
                     int shift = in.nextInt();
                     String encodedText = "";
                     int alphabetSize = 26;
